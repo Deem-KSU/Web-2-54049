@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Savora</title>
+
+  <!-- Elegant Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <img src="img/logo.png" alt="Savora Logo" class="logo">
+
+    <h1 class="Savora-name">SAVORA</h1>
+
+    <a class="signout-btn" href="index.html">Sign Out</a><!-- Sign Out Button redirect to the homepage -->
+
+  </header>
+<!-- end of Header -->
+
+<!-- Main Content -->
+   <main class="page-content">
+  <section class="container">
+    <div class="page-hero">
+      <div class="hero-text">
+        <h2 class="page-title">Welcome, Raghad</h2>
+        <p class="page-subtitle">Manage reports and ensure the community stays safe.</p>
+      </div>
+    </div>
+
+    <section class="card admin-info">
+      <h3 class="section-title">My Information</h3>
+        <div class="info-item">
+         
+          <span class="info-value"> <span class="info-label">Name: </span>Raghad Alkhurayyif</span>
+        </div>
+        <div class="info-item">
+          <span class="info-value"><span class="info-label">Email:</span>RaghadAlkhurayyif@savora.com</span>
+        </div>
+      
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h3 class="section-title">Pending Recipe Reports</h3>
+        <div class="pill">3 Reports</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Recipe</th>
+              <th>Creator</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a class="table-link" href="view-recipe.html">Spicy Oats Bowl</a>
+              </td>
+              <td class="creator-cell">
+                <img class="avatar" src="img/user1.png" alt="Creator Photo">
+                <span>Maha Alharbi</span>
+              </td>
+               <td>
+                  <form class="action-form" action="admin.html" method="get">
+                    <label class="radio-option">
+                      <input type="radio" name="action1" required>
+                      Block user
+                    </label>
+
+                    <label class="radio-option">
+                      <input type="radio" name="action1">
+                      Dismiss report
+                    </label>
+
+                    <button class="btn danger" type="submit">Submit</button>
+                  </form>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class="table-link" href="view-recipe.html">Detox Juice Mix</a>
+              </td>
+              <td class="creator-cell">
+                <img class="avatar" src="img/user2.png" alt="Creator Photo">
+                <span>Rania Saud</span>
+              </td>
+              <td>
+                  <form class="action-form" action="admin.html" method="get">
+                    <label class="radio-option">
+                      <input type="radio" name="action2" required>
+                      Block user
+                    </label>
+
+                    <label class="radio-option">
+                      <input type="radio" name="action2">
+                      Dismiss report
+                    </label>
+
+                    <button class="btn danger" type="submit">Submit</button>
+                  </form>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <a class="table-link" href="view-recipe.html">Keto Cookies</a>
+              </td>
+              <td class="creator-cell">
+                <img class="avatar" src="img/user3.png" alt="Creator Photo">
+                <span>Ahmed Nasser</span>
+              </td>
+              <td>
+                  <form class="action-form" action="admin.html" method="get">
+                    <label class="radio-option">
+                      <input type="radio" name="action3" required>
+                      Block user
+                    </label>
+
+                    <label class="radio-option">
+                      <input type="radio" name="action3">
+                      Dismiss report
+                    </label>
+
+                    <button class="btn danger" type="submit">Submit</button>
+                  </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h3 class="section-title">Blocked Users</h3>
+        <div class="pill">2 Users</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hind Alotaibi</td>
+              <td>hind.otaibi@mail.com</td>
+            </tr>
+            <tr>
+              <td>Nora Salem</td>
+              <td>nora.salem@mail.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</main>
+<!-- End of Main Content -->
+
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <img src="img/logo.png" alt="Savora Logo" class="footer-logo">
+
+      <div class="contact-info">
+        <p>Email: info@Savora.com</p>
+        <p>Phone: +966 50 000 0000</p>
+        <p>Riyadh, Saudi Arabia</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Savora. All rights reserved.
+    </div>
+  </footer>
+  <!-- <script src="script.js"></script> -->
+
+</body>
+</html>
