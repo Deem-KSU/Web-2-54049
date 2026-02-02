@@ -1,0 +1,267 @@
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #fbf0e3; 
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.main-header {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 22px 70px;
+}
+
+.logo {
+  height: 80px;
+  max-height: 80px;
+}
+
+.Savora-name {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #8f0f1f;
+}
+
+/* ===== Sign Out Button ===== */
+.signout-btn {
+  background-color: #b11226;
+  color: #ffffff;
+  
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.signout-btn:hover {
+  background-color: #8f0f1f;
+}
+
+/* ===== Page Content ===== */
+.page-content {
+  flex: 1;              
+  min-height: 60vh;
+}
+
+/* ===== Footer ===== */
+.main-footer {
+ background-color: #1f1f1f; 
+ color: #f5f5f5; 
+ padding: 45px 70px 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* ===== admin page ===== */
+.container {
+  width: min(1100px, calc(100% - 140px));
+  margin: 0 auto;
+  padding: 30px 0 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(143, 15, 31, 0.12);
+  border-radius: 16px;
+  padding: 22px;
+  margin: 18px 0;
+}
+
+.page-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px 0 6px;
+}
+
+.page-title {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #8f0f1f;
+  letter-spacing: 1px;
+}
+
+.page-subtitle {
+  margin-top: 6px;
+  opacity: 0.85;
+}
+
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.pill {
+  background: rgba(143, 15, 31, 0.08);
+  border: 1px solid rgba(143, 15, 31, 0.14);
+  color: #8f0f1f;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+
+
+.info-item {
+    margin-top: 10px;
+    gap:8px;
+    font-size: 14px;
+}
+
+.info-label {
+  font-weight: 700;
+}
+
+
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  vertical-align: middle;
+}
+
+.data-table th {
+  font-size: 13px;
+  opacity: 0.75;
+  font-weight: 700;
+}
+
+.table-link {
+  color: #8f0f1f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.table-link:hover {
+  text-decoration: underline;
+}
+
+.creator-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(143, 15, 31, 0.18);
+}
+.action-form {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.radio-option input {
+  accent-color: #b11226;
+  transform: scale(1.3);
+}
+
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn.danger {
+  background: #b11226;
+  color: #ffffff;
+}
+
+.btn.danger:hover {
+  background: #8f0f1f;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== End of admin page ===== */
+
+
