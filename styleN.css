@@ -1,0 +1,261 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #fbf0e3; 
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.main-header {
+  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  align-items: center;
+  padding: 22px 70px;
+}
+
+.logo {
+  height: 80px;
+  max-height: 80px;
+}
+
+.Savora-name {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #8f0f1f;
+}
+
+/* ===== Sign Out Button ===== */
+.signout-btn {
+  background-color: #b11226;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.signout-btn:hover {
+  background-color: #8f0f1f;
+}
+
+/* ===== Page Content ===== */
+.page-content {
+  flex: 1;              
+  min-height: 60vh;
+}
+
+/* ===== Footer ===== */
+.main-footer {
+ background-color: #1f1f1f; 
+ color: #f5f5f5; 
+ padding: 45px 70px 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+
+/* ------------------------------- */
+
+
+
+
+
+
+/* Actions */
+.recipe-actions {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+}
+
+.recipe-actions button {
+  padding: 6px 14px;
+  border-radius: 15px;
+  border: 1px solid #a5161d;
+  background: white;
+  cursor: pointer;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background: white;
+  width: 80%;
+  margin: 20px auto 60px;
+  padding: 40px;
+  border-radius: 25px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+.recipe-left img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Right Side */
+.recipe-right h2 {
+  margin-top: 0;
+  color: #8b1c2d;
+}
+
+.creator {
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+.comment-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 6px;
+}
+
+.comment-box button {
+  background-color: #a5161d;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 10px;
+}
+
+.comment {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #1f1f1f;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+}
+
+/* =====================================
+   System Home Page 
+   ===================================== */
+
+/* Center the home card vertically and horizontally */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main {
+  flex: 1;                 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Main card container */
+.home-card {
+  background-color: #ffffff;
+  width: 360px;
+  padding: 40px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Title styling */
+.home-card h2 {
+  margin: 0 0 30px;
+  color: #8b1c2d;
+  font-size: 24px;
+}
+
+/* Login button */
+.primary-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #a5161d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Login button hover effect */
+.primary-btn:hover {
+  background-color: #8b1c2d;
+}
+
+/* Text under the button */
+.muted-text {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* Sign-up link */
+.muted-text a {
+  color: #a5161d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sign-up link hover effect */
+.muted-text a:hover {
+  text-decoration: underline;
+}
+
