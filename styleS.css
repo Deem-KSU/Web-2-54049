@@ -1,0 +1,252 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #fbf0e3; 
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.main-header {
+  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  align-items: center;
+  padding: 22px 70px;
+}
+
+.logo {
+  height: 80px;
+  max-height: 80px;
+}
+
+.Savora-name {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #8f0f1f;
+}
+
+/* ===== Sign Out Button ===== */
+.signout-btn {
+  background-color: #b11226;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.signout-btn:hover {
+  background-color: #8f0f1f;
+}
+
+/* ===== Page Content ===== */
+.page-content {
+  flex: 1;              
+  min-height: 60vh;
+}
+
+/* ===== Footer ===== */
+.main-footer {
+ background-color: #1f1f1f; 
+ color: #f5f5f5; 
+ padding: 45px 70px 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.85;
+}
+/* ===== Add & Edit recipe page ===== */
+.recipe-page {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+.recipe-page .recipe-card {
+  width: 880px;
+  max-width: 95%;
+  background: #f7f0ea;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Page title */
+.recipe-page .form-title {
+  color: #8b2b2c;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Form layout */
+.recipe-page .recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Each form field */
+.recipe-page .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.recipe-page .form-group input,
+.recipe-page .form-group select,
+.recipe-page .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #e3d2c8;
+  background: #f3e8e1;
+}
+
+/* Two columns row */
+.recipe-page .form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.recipe-page .form-row .form-group {
+  flex: 1;
+}
+
+/* Steps and ingredients list */
+.recipe-page #steps-list,
+.recipe-page #ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* Add buttons */
+.recipe-page #add-step,
+.recipe-page #add-ingredient {
+  background: #b11226;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.recipe-page #add-step:hover,
+.recipe-page #add-ingredient:hover {
+  background:#8f0f1f;
+}
+
+/* Submit button */
+.recipe-page .form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.recipe-page .submit-btn {
+  background: #b11226;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.recipe-page .submit-btn:hover{
+  background:#8f0f1f;
+}
+
+/* Ingredient row */
+.recipe-page .ingredient-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Ingredient number */
+.recipe-page .ingredient-num {
+  font-weight: bold;
+  min-width: 110px;
+}
+
+/* Name + Quantity container */
+.recipe-page .ingredient-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+/* Name input */
+.recipe-page .ing-name {
+  width: 220px;
+}
+
+/* Quantity input */
+.recipe-page .ing-qty {
+  width: 140px;
+} 
+/* Step row */
+.recipe-page .step-row{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.recipe-page .step-num{
+  font-weight: bold;
+  min-width: 70px;
+}
+
+.recipe-page .step-input{
+  width: 420px;   
+}
+
+.recipe-page .vid-file {
+  background: transparent !important ;
+  border: none !important;
+  
+}
