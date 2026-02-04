@@ -1,37 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <title>Savora</title>
 
-  <!-- Elegant Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Header -->
+  <!-- Header: Logo + Site Name + Sign Out -->
   <header class="main-header">
-    <img src="logo.png" alt="Savora Logo" class="logo">
-
+    <img src="image/logo.png" alt="Savora Logo" class="logo">
     <h1 class="Savora-name">SAVORA</h1>
-
-    <button class="signout-btn">Sign Out</button>
+    <button class="signout-btn" type="button">Sign Out</button>
   </header>
 
-    <main class="page-content">
- 
-    </main>
+  <main class="page-content">
 
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+      <p><b>Welcome back, <span class="user-name">Deem</span></b></p>
+    </div>
 
-  <!-- Footer -->
+    <!-- User Summary: User Info + Stats + My Recipes Link -->
+    <section class="user-summary">
+      <div class="user-top">
+        <div class="user-info">
+          <h3>My Information</h3>
+          <p><strong>Name:</strong> Deem Alzmail</p>
+          <p><strong>Email:</strong> Deem.alz@gmail.com</p>
+        </div>
+
+        <img src="image/default-account-icon.png" alt="User photo" class="user-photo">
+      </div>
+
+      <div class="user-bottom">
+        <div class="stats">
+          <div class="stat">
+            <span class="num">11</span>
+            <span>Total Recipes</span>
+          </div>
+          <div class="stat">
+            <span class="num">132</span>
+            <span>Total Likes</span>
+          </div>
+        </div>
+
+        <a href="my-recipes.html" class="my-recipes-link">My Recipes →</a>
+      </div>
+    </section>
+
+    <!-- Recipes Section: Title + Calories Filter + Feed -->
+    <!-- Recipes Section -->
+<section class="feed-wrap">
+
+  <div class="feed-header">
+    <h2 class="feed-title">All Recipes</h2>
+
+    <div class="calorie-filter">
+      <label for="calories">Filter by Calories</label>
+      <select id="calories" name="calories">
+        <option>All Calories</option>
+        <option>Under 300 kcal</option>
+        <option>300 – 500 kcal</option>
+        <option>500 – 700 kcal</option>
+        <option>Above 700 kcal</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Recipes Grid -->
+  <div class="recipes-feed">
+
+    <article class="recipe-post">
+      <div class="post-head">
+        <div class="creator">
+          <img src="image/user1.png" class="creator-img" alt="Creator photo">
+          <span class="creator-name">Sara Ali</span>
+        </div>
+        <span class="kcal-pill">300–500 kcal</span>
+      </div>
+
+      <img src="image/Low-Carb-Strawberry-Cheesecake.png" class="post-img" alt="Low-Carb Strawberry Cheesecake">
+
+      <div class="post-body">
+        <h3 class="recipe-name">
+          <a href="recipe-lowcarb-cheesecake.html" class="recipe-link">
+            Low-Carb Strawberry Cheesecake
+          </a>
+        </h3>
+        <p class="meta">❤️ 40 likes • 420 kcal</p>
+      </div>
+    </article>
+
+    <article class="recipe-post">
+      <div class="post-head">
+        <div class="creator">
+          <img src="image/user2.png" class="creator-img" alt="Creator photo">
+          <span class="creator-name">Noor Ahmad</span>
+        </div>
+        <span class="kcal-pill">500–700 kcal</span>
+      </div>
+
+      <img src="image/Chicken-Power-Bowl.png" class="post-img" alt="Chicken Power Bowl">
+
+      <div class="post-body">
+        <h3 class="recipe-name">
+          <a href="recipe-chicken-power-bowl.html" class="recipe-link">
+            Chicken Power Bowl
+          </a>
+        </h3>
+        <p class="meta">❤️ 22 likes • 610 kcal</p>
+      </div>
+    </article>
+
+    <article class="recipe-post">
+      <div class="post-head">
+        <div class="creator">
+          <img src="image/user3.png" class="creator-img" alt="Creator photo">
+          <span class="creator-name">Lama Fahad</span>
+        </div>
+        <span class="kcal-pill">Under 300 kcal</span>
+      </div>
+
+      <img src="image/Avocado-Toast.png" class="post-img" alt="Avocado Toast">
+
+      <div class="post-body">
+        <h3 class="recipe-name">
+          <a href="recipe-avocado-toast.html" class="recipe-link">
+            Avocado Toast
+          </a>
+        </h3>
+        <p class="meta">❤️ 18 likes • 280 kcal</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <!-- Favourite Recipes: Normal Table -->
+    <section class="fav-section">
+      <h2 class="fav-title">My Favourite Recipes ♥</h2>
+
+      <div class="fav-table-wrap">
+        <table class="fav-table">
+          <thead>
+            <tr>
+              <th>Recipe Name</th>
+              <th>Recipe Photo</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><a href="recipe-chicken-power-bowl.html" class="recipe-link">Chicken Power Bowl</a></td>
+              <td><img src="image/Chicken-Power-Bowl.png" alt="Chicken Power Bowl" class="table-img"></td>
+              <td><a href="#" class="remove-link">Remove</a></td>
+            </tr>
+
+            <tr>
+              <td><a href="recipe-avocado-toast.html" class="recipe-link">Avocado Toast</a></td>
+              <td><img src="image/Avocado-Toast.png" alt="Avocado Toast" class="table-img"></td>
+              <td><a href="#" class="remove-link">Remove</a></td>
+            </tr>
+
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: Logo + Contact Info + Copyright -->
   <footer class="main-footer">
     <div class="footer-content">
-      <img src="logo.png" alt="Savora Logo" class="footer-logo">
+      <img src="image/logo.png" alt="Savora Logo" class="footer-logo">
 
       <div class="contact-info">
-        <p>Email: info@Savora.com</p>
+        <p>Email: info@savora.com</p>
         <p>Phone: +966 50 000 0000</p>
         <p>Riyadh, Saudi Arabia</p>
       </div>
@@ -41,7 +191,6 @@
       &copy; 2026 Savora. All rights reserved.
     </div>
   </footer>
-  <script src="script.js"></script>
 
 </body>
 </html>
