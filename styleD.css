@@ -1,0 +1,574 @@
+/* ============ Global ============= */
+html, body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: #fbf0e3;
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  min-height: 60vh;
+}
+
+/* =========================
+   Header
+========================= */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 70px;
+}
+
+.logo {
+  height: 80px;
+}
+
+.Savora-name {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #8f0f1f;
+}
+
+.signout-btn {
+  background-color: #b11226;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.signout-btn:hover {
+  background-color: #8f0f1f;
+}
+
+/* =========================
+   Welcome Banner
+========================= */
+.welcome-banner {
+  padding: 18px 70px 0;
+}
+
+.welcome-banner p {
+  font-size: 30px;
+  color: #444;
+}
+
+.user-name {
+  font-weight: 700;
+  color: #8f0f1f;
+}
+
+/* =========================
+   User Summary
+========================= */
+.user-summary {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px 28px;
+
+  /* same page side spacing */
+  margin: 30px 70px 40px;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 18px rgba(177, 18, 38, 0.15);
+  overflow: hidden; /* keep everything inside */
+}
+
+.user-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.user-info p {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.user-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.user-bottom {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat .num {
+  font-size: 26px;
+  font-weight: 800;
+  color: #b11226;
+}
+
+.stat span {
+  display: block;
+  font-size: 13px;
+  color: #444;
+}
+
+.my-recipes-link {
+  text-decoration: none;
+  color: #8f0f1f;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(177, 18, 38, 0.08);
+  border: 1px solid rgba(177, 18, 38, 0.25);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.my-recipes-link:hover {
+  background: #b11226;
+  color: #ffffff;
+  border-color: #b11226;
+}
+
+/* =========================
+   Feed Wrapper + Header
+========================= */
+.feed-wrap {
+  padding: 30px 70px 50px;
+}
+
+.feed-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  gap: 20px;
+}
+
+.feed-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #b11226;
+  margin-bottom: 0; /* because feed-header handles spacing */
+  letter-spacing: 0.5px;
+}
+
+/* Filter */
+.calorie-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.calorie-filter label {
+  font-size: 12px;
+  color: #666;
+}
+
+.calorie-filter select {
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+/* =========================
+   Recipes Feed
+========================= */
+.recipes-feed{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.recipe-post {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.08),
+    0 12px 26px rgba(177, 18, 38, 0.22);
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.creator-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.creator-name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.kcal-pill {
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  background: #b11226;
+  color: #ffffff;
+}
+
+.post-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 260px;
+  object-fit: cover;
+}
+
+.post-body {
+  padding: 16px 18px 20px;
+}
+
+.recipe-name {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #8f0f1f;
+}
+
+.meta {
+  font-size: 14px;
+  color: #444;
+  opacity: 0.9;
+}
+
+/* =========================
+   Footer
+========================= */
+.main-footer {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  padding: 45px 70px 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 80px;
+  object-fit: contain;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.footer-bottom {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 800px) {
+  .main-header {
+    padding: 18px 20px;
+  }
+
+  .welcome-banner {
+    padding: 14px 20px 0;
+  }
+
+  .user-summary {
+    margin: 24px 20px 34px;
+  }
+
+  .main-footer {
+    padding: 45px 20px 20px;
+  }
+
+  .feed-wrap {
+    padding: 20px;
+  }
+
+  .feed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .user-top,
+  .user-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+}
+
+
+/* ===== Favourite Recipes (Normal Table) ===== */
+.fav-section{
+  padding: 0 70px 60px;  /* نفس محاذاة الصفحة */
+}
+
+.fav-title{
+  font-size: 26px;
+  font-weight: 700;
+  margin: 28px 0 16px;
+  color: #2a2a2a;
+}
+
+.fav-table-wrap{
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 18px;          /* 🔵 الأطراف */
+  box-shadow: 0 10px 22px rgba(177, 18, 38, 0.22);
+}
+
+.fav-table{
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.fav-table th,
+.fav-table td{
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.fav-table th{
+  background: rgba(177,18,38,0.08);
+  font-weight: 700;
+}
+
+.table-img{
+  width: 180px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.recipe-link{
+  color: #8f0f1f;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.remove-link{
+  color: #8f0f1f;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (max-width: 800px){
+  .fav-section{
+    padding: 0 20px 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #fbf0e3; 
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.main-header {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 22px 70px;
+}
+
+.logo {
+  height: 80px;
+  max-height: 80px;
+}
+
+.Savora-name {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #8f0f1f;
+}
+
+/* ===== Sign Out Button ===== */
+.signout-btn {
+  background-color: #b11226;
+  color: #ffffff;
+  
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.signout-btn:hover {
+  background-color: #8f0f1f;
+}
+
+/* ===== Page Content ===== */
+.page-content {
+  flex: 1;              
+  min-height: 60vh;
+}
+
+/* ===== Footer ===== */
+.main-footer {
+ background-color: #1f1f1f; 
+ color: #f5f5f5; 
+ padding: 45px 70px 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
