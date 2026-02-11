@@ -250,3 +250,16 @@ body {
   border: none !important;
   
 }
+.recipe-page .photo-edit-row{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.recipe-page .current-img{
+  width: 150px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e3d2c8;
+}
