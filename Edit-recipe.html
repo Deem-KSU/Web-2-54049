@@ -30,7 +30,7 @@
       <!-- Recipe Name -->
       <div class="form-group">
         <label>Recipe Name</label>
-        <input type="text" value="Chicken Bowl" placeholder="Enter recipe name" required>
+        <input type="text" value="Grilled Salmon" placeholder="Enter recipe name" required>
       </div>
 
       <!-- Category + Description -->
@@ -47,7 +47,7 @@
 
         <div class="form-group">
           <label>Description</label>
-          <textarea required>High-protein meal perfect for muscle gain.</textarea>
+          <textarea required>A healthy grilled salmon recipe rich in protein and omega-3, perfect for a balanced meal.</textarea>
         </div>
       </div>
 
@@ -55,7 +55,11 @@
      
         <div class="form-group">
           <label>Recipe Photo</label>
+		  <div class="photo-edit-row">
+		  
           <input type="file" accept="image/*" required>
+		  <img src="image/Grilled_salmon.jpg" alt="Current recipe image" class="current-img">
+         </div>
         </div>
 		
 		 <!-- Ingredients -->
@@ -67,8 +71,8 @@
   <span class="ingredient-num">Ingredient 1:</span>
 
   <div class="ingredient-inputs">
-    <input type="text" class="ing-name" value="Chicken breast" required>
-    <input type="text" class="ing-qty" value="200g" required>
+    <input type="text" class="ing-name" value="Salmon fillet" required>
+    <input type="text" class="ing-qty" value="250g" required>
   </div>
 </div>
 
@@ -76,8 +80,8 @@
   <span class="ingredient-num">Ingredient 2:</span>
 
   <div class="ingredient-inputs">
-    <input type="text" class="ing-name" value="Brown rice" required>
-    <input type="text" class="ing-qty" value="1 cup" required>
+    <input type="text" class="ing-name" value="Olive oil" required>
+    <input type="text" class="ing-qty" value="1 tbsp" required>
   </div>
 </div>
   </div>
@@ -93,12 +97,12 @@
   <div id="steps-list">
     <div class="step-row">
       <span class="step-num">Step 1:</span>
-      <input type="text" class="step-input" value="Marinate chicken" required>
+      <input type="text" class="step-input" value="Season the salmon with olive oil, garlic, salt and pepper." required>
     </div>
 	
 	 <div class="step-row">
       <span class="step-num">Step 2:</span>
-      <input type="text" class="step-input" value="Grill for 8 minutes" required>
+      <input type="text" class="step-input" value="Grill the salmon for 6–8 minutes until fully cooked." required>
     </div>
 	
   </div>
