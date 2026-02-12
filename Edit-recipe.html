@@ -2,22 +2,22 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Savora</title>
+  <title>SAVORA | Edit Recipe</title>
 
   <!-- Elegant Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleS.css">
 </head>
 <body>
 
   <!-- Header -->
   <header class="main-header">
-    <img src="logo.png" alt="Savora Logo" class="logo">
+    <img src="image/logo.png" alt="Savora Logo" class="logo">
 
     <h1 class="Savora-name">SAVORA</h1>
 
-    <button class="signout-btn">Sign Out</button>
+    <a class="header-btn" href="index.html">Sign Out</a>
   </header>
 
 <main class="recipe-page">
@@ -25,12 +25,12 @@
   <section class="recipe-card">
     <h1 class="form-title">Edit Recipe</h1>
 <!-----form----->
-    <form action="My-recipes.html" class="recipe-form">
+    <form action="my_recipes.html" class="recipe-form">
 
       <!-- Recipe Name -->
       <div class="form-group">
         <label>Recipe Name</label>
-        <input type="text" value="Grilled Salmon" placeholder="Enter recipe name" required>
+        <input type="text" value="Strawberry Cheesecake" placeholder="Enter recipe name" required>
       </div>
 
       <!-- Category + Description -->
@@ -39,15 +39,15 @@
           <label>Category</label>
           <select required>
             <option value="" disabled selected>Select category</option>
-            <option selected>Main meals</option>
+            <option>Main meals</option>
             <option>Snacks & drinks</option>
-            <option>Healthy desserts</option>
+            <option selected>Healthy desserts </option>
           </select>
         </div>
 
         <div class="form-group">
           <label>Description</label>
-          <textarea required>A healthy grilled salmon recipe rich in protein and omega-3, perfect for a balanced meal.</textarea>
+          <textarea required>A rich and creamy strawberry cheesecake topped with fresh strawberries, offering a perfect balance of sweetness and smooth texture.</textarea>
         </div>
       </div>
 
@@ -58,7 +58,7 @@
 		  <div class="photo-edit-row">
 		  
           <input type="file" accept="image/*" required>
-		  <img src="image/Grilled_salmon.jpg" alt="Current recipe image" class="current-img">
+		  <img src="image/Low-Carb-Strawberry-Cheesecake.png" alt="Current recipe image" class="current-img">
          </div>
         </div>
 		
@@ -71,8 +71,8 @@
   <span class="ingredient-num">Ingredient 1:</span>
 
   <div class="ingredient-inputs">
-    <input type="text" class="ing-name" value="Salmon fillet" required>
-    <input type="text" class="ing-qty" value="250g" required>
+    <input type="text" class="ing-name" value="Sugar" required>
+    <input type="text" class="ing-qty" value="1/2 cup" required>
   </div>
 </div>
 
@@ -80,8 +80,8 @@
   <span class="ingredient-num">Ingredient 2:</span>
 
   <div class="ingredient-inputs">
-    <input type="text" class="ing-name" value="Olive oil" required>
-    <input type="text" class="ing-qty" value="1 tbsp" required>
+    <input type="text" class="ing-name" value="Cream Cheese" required>
+    <input type="text" class="ing-qty" value="200g" required>
   </div>
 </div>
   </div>
@@ -97,12 +97,12 @@
   <div id="steps-list">
     <div class="step-row">
       <span class="step-num">Step 1:</span>
-      <input type="text" class="step-input" value="Season the salmon with olive oil, garlic, salt and pepper." required>
+      <input type="text" class="step-input" value="Mix cream cheese, sugar, and vanilla." required>
     </div>
 	
 	 <div class="step-row">
       <span class="step-num">Step 2:</span>
-      <input type="text" class="step-input" value="Grill the salmon for 6–8 minutes until fully cooked." required>
+      <input type="text" class="step-input" value="Pour mixture over the crust." required>
     </div>
 	
   </div>
@@ -117,7 +117,7 @@
       <div class="form-group">
         <label>Upload Video or URL (optional)</label>
 		<input type="file" class="vid-file" accept="video/*">
-        <input type="url" placeholder="URL">
+        <input type="url" value="https://youtu.be/IzHzRtLBAls?si=3uhJnWVG5a7i6fCY">
       </div>
 
       <!-- Submit -->
@@ -134,7 +134,7 @@
   <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-content">
-      <img src="logo.png" alt="Savora Logo" class="footer-logo">
+      <img src="image/logo.png" alt="Savora Logo" class="footer-logo">
 
       <div class="contact-info">
         <p>Email: info@Savora.com</p>
@@ -147,7 +147,7 @@
       &copy; 2026 Savora. All rights reserved.
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="scriptS.js"></script>
 
 </body>
 </html>
