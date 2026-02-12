@@ -2,46 +2,39 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Savora</title>
-
-  <!-- Elegant Google Font -->
+  <title>SAVORA | Add Recipe</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleS.css">
 </head>
 <body>
 
-  <!-- Header -->
   <header class="main-header">
-    <img src="logo.png" alt="Savora Logo" class="logo">
+    <img src="image/logo.png" alt="Savora Logo" class="logo">
 
     <h1 class="Savora-name">SAVORA</h1>
 
-    <button class="signout-btn">Sign Out</button>
+     <a href="index.html" class="header-btn">Sign Out</a>
   </header>
 
 <main class="recipe-page">
 
   <section class="recipe-card">
     <h1 class="form-title">Add New Recipe</h1>
-<!-----form----->
-    <form action="My-recipes.html" class="recipe-form">
+    <form action="my_recipes.html" class="recipe-form">
 
-      <!-- Recipe Name -->
       <div class="form-group">
         <label>Recipe Name</label>
         <input type="text" placeholder="Enter recipe name" required>
       </div>
 
-      <!-- Category + Description -->
       <div class="form-row">
         <div class="form-group">
           <label>Category</label>
           <select required>
             <option value="" disabled selected>Select category</option>
-            <option>Main meals</option>
+         <option>Main meals</option>
             <option>Snacks & drinks</option>
-            <option>Healthy desserts</option>
+            <option>Healthy desserts </option>
           </select>
         </div>
 
@@ -50,15 +43,12 @@
           <textarea placeholder="Enter recipe description" required></textarea>
         </div>
       </div>
-
-      <!-- Photo  -->
      
         <div class="form-group">
           <label>Recipe Photo</label>
           <input type="file" accept="image/*" required>
         </div>
 		
-		 <!-- Ingredients -->
   <div class="form-group">
   <label>Ingredients</label>
 
@@ -76,8 +66,6 @@
   <button type="button" id="add-ingredient">+ Add Ingredient</button>
 </div>
 		
-		
-       <!-- Instructions -->
     <div class="form-group">
   <label>Instructions</label>
 
@@ -91,17 +79,12 @@
   <button type="button" id="add-step">+ Add Step</button>
 </div>
       
-
-  
-
-      <!-- Video -->
       <div class="form-group">
         <label>Upload Video or URL (optional)</label>
 		<input type="file" class="vid-file" accept="video/*">
         <input type="url" placeholder="URL">
       </div>
 
-      <!-- Submit -->
       <div class="form-actions">
         <button type="submit" class="submit-btn">Add Recipe</button>
       </div>
@@ -111,24 +94,22 @@
 
 </main>
 
-
-  <!-- Footer -->
-  <footer class="main-footer">
+ <footer class="main-footer">
     <div class="footer-content">
-      <img src="logo.png" alt="Savora Logo" class="footer-logo">
+      <img src="image/logo.png" alt="Savora Logo" class="footer-logo">
 
       <div class="contact-info">
         <p>Email: info@Savora.com</p>
         <p>Phone: +966 50 000 0000</p>
         <p>Riyadh, Saudi Arabia</p>
       </div>
+      
     </div>
 
-    <div class="footer-bottom">
-      &copy; 2026 Savora. All rights reserved.
-    </div>
+    <div class="footer-bottom">&copy; 2026 Savora. All rights reserved.</div>
+
   </footer>
-  <script src="script.js"></script>
+  <script src="scriptS.js"></script>
 
 </body>
 </html>
