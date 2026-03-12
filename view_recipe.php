@@ -204,25 +204,28 @@ $reported=mysqli_num_rows($reportCheck);
 
 </section>
 
-
-<?php 
-if(!empty($recipe['videoFilePath']) && 
-file_exists("uploads/".$recipe['videoFilePath'])){ 
-?>
-
 <section>
 
 <h3>Video</h3>
 <br>
+
+<?php if(!empty($recipe['videoFilePath'])){ ?>
 
 <a href="uploads/<?php echo $recipe['videoFilePath']; ?>" 
 class="tutorial-btn" target="_blank">
 View Tutorial
 </a>
 
-</section>
+<?php } else { ?>
+
+<a class="tutorial-btn"
+style="pointer-events:none; opacity:0.5; cursor:not-allowed;">
+No Video Tutorial
+</a>
 
 <?php } ?>
+
+</section>
 
 
 <section>
