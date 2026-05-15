@@ -15,27 +15,27 @@ if ($_SESSION['user_type'] != 'admin') {
 
 $adminID = $_SESSION['user_id'];
 
-$adminQuery = "SELECT firstName, lastName, emailAddress FROM Users WHERE id = $adminID";
+$adminQuery = "SELECT firstName, lastName, emailAddress FROM users WHERE id = $adminID";
 $adminResult = mysqli_query($conn, $adminQuery);
 $admin = mysqli_fetch_assoc($adminResult);
 
 $reportsQuery = "
 SELECT 
-    Report.id AS reportID,
-    Report.recipeID,
-    Recipe.name AS recipeName,
-    Users.id AS creatorID,
-    Users.firstName,
-    Users.lastName,
-    Users.photoFileName
-FROM Report
-JOIN Recipe ON Report.recipeID = Recipe.id
-JOIN Users ON Recipe.userID = Users.id
-ORDER BY Report.id DESC
+    report.id AS reportID,
+    report.recipeID,
+    recipe.name AS recipeName,
+    users.id AS creatorID,
+    users.firstName,
+    users.lastName,
+    users.photoFileName
+FROM report
+JOIN recipe ON report.recipeID = recipe.id
+JOIN users ON recipe.userID = users.id
+ORDER BY report.id DESC
 ";
 $reportsResult = mysqli_query($conn, $reportsQuery);
 
-$blockedQuery = "SELECT firstName, lastName, emailAddress FROM BlockedUser ORDER BY id DESC";
+$blockedQuery = "SELECT firstName, lastName, emailAddress FROM blockeduser ORDER BY id DESC";
 $blockedResult = mysqli_query($conn, $blockedQuery);
 
 $reportsCount = mysqli_num_rows($reportsResult);
