@@ -22,7 +22,7 @@ $creatorID = (int)$_POST['creatorID'];
 $action = $_POST['action'];
 
 if ($action == "dismiss") {
-    $result = mysqli_query($conn, "DELETE FROM Report WHERE id = $reportID");
+    $result = mysqli_query($conn, "DELETE FROM report WHERE id = $reportID");
 
     if ($result) {
         echo "true";
@@ -34,7 +34,7 @@ if ($action == "dismiss") {
 }
 
 if ($action == "block") {
-    $userQuery = "SELECT firstName, lastName, emailAddress, photoFileName FROM Users WHERE id = $creatorID";
+    $userQuery = "SELECT firstName, lastName, emailAddress, photoFileName FROM users WHERE id = $creatorID";
     $userResult = mysqli_query($conn, $userQuery);
     $user = mysqli_fetch_assoc($userResult);
 
@@ -43,10 +43,10 @@ if ($action == "block") {
         $lastName = mysqli_real_escape_string($conn, $user['lastName']);
         $emailAddress = mysqli_real_escape_string($conn, $user['emailAddress']);
 
-        $checkBlocked = mysqli_query($conn, "SELECT id FROM BlockedUser WHERE emailAddress = '$emailAddress'");
+        $checkBlocked = mysqli_query($conn, "SELECT id FROM blockeduser WHERE emailAddress = '$emailAddress'");
 
         if (mysqli_num_rows($checkBlocked) == 0) {
-            mysqli_query($conn, "INSERT INTO BlockedUser (firstName, lastName, emailAddress)
+            mysqli_query($conn, "INSERT INTO blockeduser (firstName, lastName, emailAddress)
             VALUES ('$firstName', '$lastName', '$emailAddress')");
         }
 
@@ -57,7 +57,7 @@ if ($action == "block") {
             }
         }
 
-        $recipesQuery = mysqli_query($conn, "SELECT photoFileName, videoFilePath FROM Recipe WHERE userID = $creatorID");
+        $recipesQuery = mysqli_query($conn, "SELECT photoFileName, videoFilePath FROM recipe WHERE userID = $creatorID");
 
         while ($recipe = mysqli_fetch_assoc($recipesQuery)) {
             if (!empty($recipe['photoFileName'])) {
@@ -75,7 +75,7 @@ if ($action == "block") {
             }
         }
 
-        $deleteUser = mysqli_query($conn, "DELETE FROM Users WHERE id = $creatorID");
+        $deleteUser = mysqli_query($conn, "DELETE FROM users WHERE id = $creatorID");
 
         if ($deleteUser) {
             echo "true|" . $firstName . " " . $lastName . "|" . $emailAddress;
